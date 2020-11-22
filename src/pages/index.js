@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import ESImage from "../components/images/expertSupportImg"
+import TwoIntegrate from "../components/images/twoIntegrate"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -14,6 +15,34 @@ const IndexPage = () => (
         <h1>Transform your bottom line with every scan</h1>
         <p>Increase your revenue through scan data programs with brands and by offering multi-item discount deals at checkout.</p>
         <Link to="/" className="start-button-large">Get started</Link>
+      </div>
+    </div>
+    <div className="infobox">
+      <div className="infobox-placeholder-img"></div>
+      <div className="infobox-text left">
+        <h2>Get paid more with no extra effort</h2>
+        <p>Earn revenue by signing up for scan data programs. Sharing data happens automatically and you get paid in full, every month.</p>
+      </div>
+    </div>
+    <div className="sell-national">
+      <div className="sell-national-content">
+        <div>Sell just like the leading national chains starting at <span class="highlight">$20 per month</span></div>
+        <Link to="/" className="start-button-large-green">Get started</Link>
+      </div>
+    </div>
+    <div className="infobox">
+      <div className="infobox-text right">
+        <h2>Empty shelves faster with multi-item* discounts</h2>
+        <p>Increase sales volume with brand-funded discounts that get customers buying more. There’s no manual reporting involved, and Skupos handles any data errors that come back from the brand.</p>
+        <p>*Multi-pack discounts for tobacco products only</p>
+      </div>
+      <div className="infobox-placeholder-img"></div>
+    </div>
+    <div className="infobox">
+      <div className="infobox-placeholder-img"></div>
+      <div className="infobox-text left">
+        <h2>Know what’s selling and why</h2>
+        <p>Track sales insights and identify buyer behavior trends. Visualize total sales, top-selling products, revenue, fuel gallons pumped, in-store foot traffic, reimbursements and more.</p>
       </div>
     </div>
     <div className="get-started-grid">
@@ -35,22 +64,22 @@ const IndexPage = () => (
           <h3>Secure &amp; Reliable</h3>
           <p>Skupos protects transaction data with bank-grade security.</p>
         </div>
-        <div className="sell-smarter-img"></div>
+        <TwoIntegrate />
         <div className="sell-smarter-grid-text">
           <h3>Easy to integrate</h3>
           <p>Skupos protects transaction data with bank-grade security.</p>
         </div>
-        <div className="sell-smarter-img"></div>
+        <TwoIntegrate />
         <div className="sell-smarter-grid-text">
           <h3>Quick to get started</h3>
           <p>Skupos protects transaction data with bank-grade security.</p>
         </div>
-        <div className="sell-smarter-img"></div>
+        <TwoIntegrate />
         <div className="sell-smarter-grid-text">
           <h3>Contract-free</h3>
           <p>Skupos protects transaction data with bank-grade security.</p>
         </div>
-        <div className="sell-smarter-img"></div>
+        <TwoIntegrate />
       </div>
     </div>
     <div className="expert-support">

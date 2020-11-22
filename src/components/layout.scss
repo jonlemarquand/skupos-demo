@@ -141,6 +141,76 @@ p {
   max-width: 1200px;
   height: 580px;
   margin: 120px auto;
+  display: flex;
+
+  .infobox-placeholder-img {
+    height: 100%;
+    width: 540px;
+    background: $skgreen;
+  }
+
+  .infobox-text {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      text-align: left;
+      margin: 0;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 52px;
+      /* or 108% */
+
+      letter-spacing: -1.5px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      /* or 160% */
+
+      letter-spacing: -0.5px;
+    }
+
+    &.left {
+      margin-left: 120px;
+    }
+    &.right {
+      margin-right: 120px;
+    }
+  }
+}
+
+.sell-national {
+  height: 520px;
+  background: $skblack;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $skwhite;
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 62px;
+  /* or 101% */
+  
+  text-align: center;
+  letter-spacing: -1.5px;
+
+  .sell-national-content {
+    max-width: 946px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .highlight {
+      color: $skgreen;
+    }
+  }
 }
 
 .get-started-grid {
@@ -232,7 +302,7 @@ p {
 .sell-smarter {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 140px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,6 +311,35 @@ p {
     margin-top: 0;
     max-width: 510px;
     text-align: center;
+  }
+  .sell-smarter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 59px;
+    margin-top: 60px;
+  }
+  .sell-smarter-grid-text {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      font-family: $skfont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      /* or 156% */
+      letter-spacing: -0.005em;
+      margin: 0;
+      text-align: left;
+    }
   }
 }
 
