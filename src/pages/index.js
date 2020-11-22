@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
+import ESImage from "../components/images/expertSupportImg"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -15,6 +15,13 @@ const IndexPage = () => (
         <p>Increase your revenue through scan data programs with brands and by offering multi-item discount deals at checkout.</p>
         <Link to="/" className="start-button-large">Get started</Link>
       </div>
+    </div>
+    <div className="expert-support">
+      <div className="expert-support-text">
+        <h2>Expert support when you need it</h2>
+        <div>Get help whenever you’re curious. Speak to us on the phone or on chat 5 days a week. In the mood to DIY? Skip right to our comprehensive Help Center.</div>
+      </div>
+      <ESImage />
     </div>
     <div className="customer-story">
       <hr />

@@ -16,6 +16,18 @@ h1 {
   letter-spacing: -3px;
 }
 
+h2 {
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 54px;
+  /* identical to box height, or 112% */
+
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+
 p {
   font-family: $skfont;
   font-style: normal;
@@ -112,6 +124,41 @@ p {
   line-height: 32px;
   /* identical to box height, or 178% */
   letter-spacing: -0.5px;
+}
+
+.expert-support {
+  background: $skblack;
+  max-width: 1200px;
+  height: 551.57px;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+
+  .expert-support-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 486px;
+      color: $skLightPara;
+      font-family: $skfont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 29px;
+      /* or 145% */
+      letter-spacing: -0.5px;
+
+    h2 {
+      color: $skwhite;
+      text-align: left;
+      font-size: 48px;
+      margin-bottom: 14px;
+    }
+  }
+
 }
 
 .customer-story {
