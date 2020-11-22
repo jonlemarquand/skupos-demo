@@ -28,6 +28,17 @@ h2 {
   letter-spacing: -1.5px;
 }
 
+h3 {
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 52px;
+  /* identical to box height, or 162% */
+
+  letter-spacing: -1.5px;
+}
+
 p {
   font-family: $skfont;
   font-style: normal;
@@ -124,6 +135,113 @@ p {
   line-height: 32px;
   /* identical to box height, or 178% */
   letter-spacing: -0.5px;
+}
+
+.infobox {
+  max-width: 1200px;
+  height: 580px;
+  margin: 120px auto;
+}
+
+.get-started-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 170px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(8, 102px);
+  grid-gap: 16px;
+  
+  .gs-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    font-family: $skfont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+    /* identical to box height, or 175% */
+
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: $skwhite;
+  }
+
+  .yellow {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+    background: #FBD224;
+  }
+
+  .orange {
+    grid-column: 1 / 5;
+    grid-row: 4 / 7;
+    background: #F8962F;
+  }
+
+  .black {
+    grid-column: 5 / 13;
+    grid-row: 1 / 5;
+    background: $skblack;
+  }
+
+  .purple {
+    grid-column: 5 / 9;
+    grid-row: 5 / 7;
+    background: #635EA9;
+  }
+
+  .mint {
+    grid-column: 9 / 13;
+    grid-row: 5 / 7;
+    background: $skgreen;
+  }
+
+  .skyblue {
+    grid-column: 13 / 17;
+    grid-row: 1 / 7;
+    background: #58A1D6;
+  }
+
+  .gs-other {
+    grid-column: 5 / 13;
+    grid-row: 7;
+    text-align: center;
+    margin-top: 45px;
+    font-family: $skfont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+
+    text-align: center;
+    letter-spacing: -0.003em;
+
+    .fake-link {
+      color: $skgreen;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.sell-smarter {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-top: 0;
+    max-width: 510px;
+    text-align: center;
+  }
 }
 
 .expert-support {
