@@ -16,6 +16,15 @@ const IndexPage = () => (
         <Link to="/" className="start-button-large">Get started</Link>
       </div>
     </div>
+    <div className="customer-story">
+      <hr />
+      <div className="customer-story-content">
+        <div className="grey-rectangle"></div>
+        <div className="customer-story-text">Nisi suspendisse curabitur pharetra vehicula nibh odio et mauris, sed. Porttitor libero est malesuada sed nec morbi feugiat</div>
+        <Link to="/" className="customer-story-link">Read customer story</Link>
+      </div>
+      <hr />
+    </div>
     <div className="join-us">
       <div className="join-us-content">
         Join the 14,000+ retailers already connected to Skupos

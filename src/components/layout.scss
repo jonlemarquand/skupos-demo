@@ -114,6 +114,69 @@ p {
   letter-spacing: -0.5px;
 }
 
+.customer-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 161.35px auto;
+
+  hr {
+    height: 4px;
+    width: 122.02px;
+    background: $skMidGrey;
+    border: 0px;
+  }
+}
+
+.customer-story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  height: 350px;
+  margin: 86px 0;
+  
+  .grey-rectangle {
+    background: $skLightGrey;
+    border-radius: 4px;
+    width: 127.7px;
+    height: 38.87px;
+  }
+
+  .customer-story-text {
+    font-family: $skfont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 54px;
+    /* or 112% */
+
+    text-align: center;
+    letter-spacing: -1.5px;
+  }
+
+  .customer-story-link {
+    color: $skblack;
+    text-decoration: none;
+    border-bottom: 1px solid $skOffBlack;
+    padding-bottom: 6px;
+    font-family: $skfont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    /* identical to box height, or 18px */
+
+    text-align: center;
+    letter-spacing: -0.003em;
+
+    &:hover {
+      border-bottom: 1px solid $skgreen;
+    }
+  }
+}
+
 .join-us {
   height: 591.13px;
   display: flex;
