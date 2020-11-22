@@ -4,3 +4,96 @@ body {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 62px;
+  /* or 101% */
+
+  letter-spacing: -3px;
+}
+
+p {
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* or 145% */
+
+  letter-spacing: -0.003em;
+}
+
+.start-button-small {
+  background: $skgreen;
+  padding: 15px 25px;
+  color: $skwhite;
+  text-decoration: none;
+  border-radius: 84px;
+}
+
+.start-button-large {
+  background: $skgreen;
+  padding: 20px 40px;
+  color: $skwhite;
+  text-decoration: none;
+  border-radius: 100px;
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+
+  letter-spacing: -0.003em;
+
+}
+
+/* index.js */
+
+.hero {
+  height: 798px;
+  width: 100%;
+  background:  linear-gradient(90deg, #F4F4F4 23.2%, rgba(248, 248, 248, 0) 44.65%), url("../../static/hero-image.png");
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+
+  .hero-text {
+    max-width: 1200px;
+    margin-left: 163.02px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    h1, p, a {
+      margin: 9px 0;
+    }
+    
+    h1 {
+      max-width: 620px;
+    }
+
+    p {
+      max-width: 540px;
+    }
+  }
+}
+
+.scan-data {
+  position: absolute;
+  left: 34px;
+  color: $skblack;
+  font-family: $skfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+  letter-spacing: -0.5px;
+}

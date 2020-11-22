@@ -1,4 +1,4 @@
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -14,9 +14,9 @@ const Header = ({ siteTitle }) => (
       <li>Support</li>
     </ul>
     <Logo />
-    <ul>
+    <ul className="right-header">
       <li>Log in</li>
-      <li>Get started</li>
+      <Link to="/" className="start-button-small"><li>Get started</li></Link>
     </ul>
   </header>
 )
