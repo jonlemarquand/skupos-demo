@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import Logo from "../components/logo"
+import Logo from "./logos/logo"
 
 import "./header.scss"
 
