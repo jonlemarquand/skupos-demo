@@ -10,6 +10,16 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="footer-tl">
                     <LogoWhite />
+                    <div class="button-box-container">
+                        <div className="button-box">
+                            <p>Et etiam cursus sit et et fringilla curabitur nisl ultrices.</p>
+                            <span class="button-box-arrow">&gt;</span>
+                        </div>
+                        <div className="button-box">
+                            <p>Et etiam cursus sit et et fringilla curabitur nisl ultrices.</p>
+                            <span class="button-box-arrow">&gt;</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="footer-columns">
                     <ul>

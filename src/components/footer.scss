@@ -1,6 +1,6 @@
 footer {
     background: $skblack;
-    min-height: 300px;
+    min-height: 400px;
     padding: 90px 163px;
     color: $skwhite;
     display: flex;
@@ -20,11 +20,12 @@ footer {
 
     ul {
         margin: 0;
+        padding: 0;
     }
 
     li {
         font-family: $skfont;
-        min-width: 120px;
+        width: 120px;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -51,10 +52,47 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-grow: 1;
+        margin-left: 180px;
+
     }
     .footer-bl {
         display: flex;
         justify-content: space-between;
         max-width: 400px;
+    }
+}
+
+.button-box-container {
+    margin-top: 40px;
+}
+
+.button-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 3px;
+    border: $skLightWhite 0.5px solid;
+    width: 262.42px;
+    height: 61.97px;
+    margin-bottom: 10.7px;
+    transition: 0.3s all ease-out;
+
+    p {
+        width: 200px;
+        font-family: $skfont;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 131.5%;
+        /* or 17px */
+    
+        letter-spacing: -0.015em;
+        text-transform: none;
+    }
+
+    &:hover {
+        background: $skgreen;
+        cursor: pointer;
     }
 }
