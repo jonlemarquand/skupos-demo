@@ -3,11 +3,21 @@ header {
     align-items: center;
     height: 98px;
     padding: 0 34px;
+    border-bottom: 1px solid rgba(10, 37, 51, 0.1);
 
     ul {
         list-style: none;
         display: flex;
         justify-content: space-between;
         margin: 0;
+        color: $skblack;
+        font-family: $skfont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        /* identical to box height */
+
+        letter-spacing: -0.015em;
     }
 }
