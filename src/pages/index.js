@@ -1,27 +1,110 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import ESImage from "../components/images/expertSupportImg"
 import TwoIntegrate from "../components/images/twoIntegrate"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = () => {
+
+  const data = useStaticQuery(graphql`
+  query {
+    wpPage(slug: {eq: "home"}) {
+      id
+      infoblock {
+        __typename
+        infoblockHeader
+        infoblockContent
+        infoblockImage {
+          sourceUrl
+        }
+        infoblockHeader2
+        infoblockContent2
+        infoblockImage2 {
+          sourceUrl
+        }
+        infoblockHeader3
+        infoblockContent3
+        infoblockImage3 {
+          sourceUrl
+        }
+      }
+      heroSection {
+        heroHeader
+        heroContent
+        heroButton {
+          url
+          title
+        }
+      }
+      get_started_grid {
+        blackText
+        blueText1
+        blueText2
+        greenText
+        header
+        orangeText
+        purpleText
+        yellowText
+        blueImage1 {
+          sourceUrl
+        }
+        blueImage2 {
+          sourceUrl
+        }
+      }
+      sellSmarter {
+        header
+        introText
+        subheader1
+        subheader2
+        subheader3
+        subheader4
+        subtext1
+        subtext2
+        subtext3
+        subtext4
+      }
+      adverts {
+        advertText1
+        advertText2
+        boxAdvert1
+        boxAdvert1Text
+        customerStory1Text
+        customerStory1Link {
+          title
+          url
+        }
+        advertLink2 {
+          title
+          url
+        }
+        advertLink1 {
+          title
+          url
+        }
+      }
+    }
+  }
+`)
+
+return (
   <Layout>
     <SEO title="Home" />
     <p className="scan-data">Scan Data</p>
     <div className="hero">
       <div className="hero-text">
-        <h1>Transform your bottom line with every scan</h1>
-        <p>Increase your revenue through scan data programs with brands and by offering multi-item discount deals at checkout.</p>
-        <Link to="/" className="start-button-large">Get started</Link>
+        <h1>{ data.wpPage.heroSection.heroHeader }</h1>
+        <p>{ data.wpPage.heroSection.heroContent }</p>
+        <Link to="/" className="start-button-large">{ data.wpPage.heroSection.heroButton.title }</Link>
       </div>
     </div>
     <div className="infobox">
       <div className="infobox-placeholder-img"></div>
       <div className="infobox-text left">
-        <h2>Get paid more with no extra effort</h2>
-        <p>Earn revenue by signing up for scan data programs. Sharing data happens automatically and you get paid in full, every month.</p>
+        <h2>{ data.wpPage.infoblock.infoblockHeader }</h2>
+        <p>{ data.wpPage.infoblock.infoblockContent }</p>
       </div>
     </div>
     <div className="sell-national">
@@ -32,17 +115,16 @@ const IndexPage = () => (
     </div>
     <div className="infobox">
       <div className="infobox-text right">
-        <h2>Empty shelves faster with multi-item* discounts</h2>
-        <p>Increase sales volume with brand-funded discounts that get customers buying more. There’s no manual reporting involved, and Skupos handles any data errors that come back from the brand.</p>
-        <p>*Multi-pack discounts for tobacco products only</p>
+        <h2>{ data.wpPage.infoblock.infoblockHeader2 }</h2>
+        <p>{ data.wpPage.infoblock.infoblockContent2 }</p>
       </div>
       <div className="infobox-placeholder-img"></div>
     </div>
     <div className="infobox">
       <div className="infobox-placeholder-img"></div>
       <div className="infobox-text left">
-        <h2>Know what’s selling and why</h2>
-        <p>Track sales insights and identify buyer behavior trends. Visualize total sales, top-selling products, revenue, fuel gallons pumped, in-store foot traffic, reimbursements and more.</p>
+        <h2>{ data.wpPage.infoblock.infoblockHeader3 }</h2>
+        <p>{ data.wpPage.infoblock.infoblockContent3 }</p>
       </div>
     </div>
     <div className="get-started-grid">
@@ -57,35 +139,35 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="sell-smarter">
-      <h2>Everything you need to sell smarter</h2>
-      <p>Skupos simplifies every part of the process so all you have to do is run your store the same as before.</p>
+      <h2>{ data.wpPage.sellSmarter.header }</h2>
+      <p>{ data.wpPage.sellSmarter.introText }</p>
       <div className="sell-smarter-grid">
         <div className="sell-smarter-grid-text">
-          <h3>Secure &amp; Reliable</h3>
-          <p>Skupos protects transaction data with bank-grade security.</p>
+          <h3>{ data.wpPage.sellSmarter.subheader1 }</h3>
+          <p>{ data.wpPage.sellSmarter.subtext1 }</p>
         </div>
         <TwoIntegrate />
         <div className="sell-smarter-grid-text">
-          <h3>Easy to integrate</h3>
-          <p>Skupos protects transaction data with bank-grade security.</p>
+          <h3>{ data.wpPage.sellSmarter.subheader2 }</h3>
+          <p>{ data.wpPage.sellSmarter.subtext2 }</p>
         </div>
         <TwoIntegrate />
         <div className="sell-smarter-grid-text">
-          <h3>Quick to get started</h3>
-          <p>Skupos protects transaction data with bank-grade security.</p>
+          <h3>{ data.wpPage.sellSmarter.subheader3 }</h3>
+          <p>{ data.wpPage.sellSmarter.subtext3 }</p>
         </div>
         <TwoIntegrate />
         <div className="sell-smarter-grid-text">
-          <h3>Contract-free</h3>
-          <p>Skupos protects transaction data with bank-grade security.</p>
+          <h3>{ data.wpPage.sellSmarter.subheader4 }</h3>
+          <p>{ data.wpPage.sellSmarter.subtext4 }</p>
         </div>
         <TwoIntegrate />
       </div>
     </div>
     <div className="expert-support">
       <div className="expert-support-text">
-        <h2>Expert support when you need it</h2>
-        <div>Get help whenever you’re curious. Speak to us on the phone or on chat 5 days a week. In the mood to DIY? Skip right to our comprehensive Help Center.</div>
+        <h2>{ data.wpPage.adverts.boxAdvert1 }</h2>
+        <div>{ data.wpPage.adverts.boxAdvert1Text }</div>
       </div>
       <ESImage />
     </div>
@@ -93,18 +175,18 @@ const IndexPage = () => (
       <hr />
       <div className="customer-story-content">
         <div className="grey-rectangle"></div>
-        <div className="customer-story-text">Nisi suspendisse curabitur pharetra vehicula nibh odio et mauris, sed. Porttitor libero est malesuada sed nec morbi feugiat</div>
-        <Link to="/" className="customer-story-link">Read customer story</Link>
+        <div className="customer-story-text">{ data.wpPage.adverts.customerStory1Text }</div>
+        <Link to={data.wpPage.adverts.customerStory1Link.url} className="customer-story-link">{ data.wpPage.adverts.customerStory1Link.title }</Link>
       </div>
       <hr />
     </div>
     <div className="join-us">
       <div className="join-us-content">
-        Join the 14,000+ retailers already connected to Skupos
-        <Link to="/" className="start-button-large-green">Get started</Link>
+      { data.wpPage.adverts.advertText2 }
+        <Link to={data.wpPage.adverts.advertLink2.link} className="start-button-large-green">{ data.wpPage.adverts.advertLink2.title }</Link>
       </div>
     </div>
   </Layout>
-)
+)}
 
 export default IndexPage
