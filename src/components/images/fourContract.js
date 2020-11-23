@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-const TwoIntegrate = () => {
+const FourContract = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "integrate.png" }) {
+      placeholderImage: file(relativePath: { eq: "ss-contract.png" }) {
         childImageSharp {
           fixed(height: 200) {
             ...GatsbyImageSharpFixed
@@ -33,4 +33,4 @@ const TwoIntegrate = () => {
   return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
 }
 
-export default TwoIntegrate
+export default FourContract

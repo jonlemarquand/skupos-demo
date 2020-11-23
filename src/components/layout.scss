@@ -121,7 +121,13 @@ p {
     p {
       max-width: 540px;
     }
+
+    @media (max-width: $mobile) {
+      margin-left: 30px;
+    }
   }
+
+  
 }
 
 .scan-data {
@@ -181,6 +187,10 @@ p {
       margin-right: 120px;
     }
   }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
 }
 
 .sell-national {
@@ -210,6 +220,19 @@ p {
     .highlight {
       color: $skgreen;
     }
+    .sell-national-link {
+      margin-top: 43.62px;
+      font-family: $skfont;
+      color: $skwhite;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      /* identical to box height, or 18px */
+
+      letter-spacing: -0.003em;
+    }
   }
 }
 
@@ -232,7 +255,7 @@ p {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 42px;
+    //line-height: 42px;
     /* identical to box height, or 175% */
 
     text-align: center;
@@ -250,6 +273,17 @@ p {
     grid-column: 1 / 5;
     grid-row: 4 / 7;
     background: #F8962F;
+  
+    .white-circle {
+      width: 113.87px;
+      height: 113.87px;
+      border-radius: 50%;
+      background: $skwhite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //margin-bottom: 20px;
+    }
   }
 
   .black {
@@ -274,6 +308,26 @@ p {
     grid-column: 13 / 17;
     grid-row: 1 / 7;
     background: #58A1D6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0;
+  
+    .skyblue-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      .skyblue-text {
+        padding: 30px;
+      }
+    }
+  
+  }
+
+  .gs-content {
+    margin-top: 20px;
+    padding: 0 30px;
   }
 
   .gs-other {
@@ -297,6 +351,20 @@ p {
     }
   }
 
+  .or-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+
+
+    hr {
+      width: 73px;
+      height: 1px;
+      background: $skLightGrey;
+      border: none;
+    }
+  }
 }
 
 .sell-smarter {
@@ -318,6 +386,10 @@ p {
     grid-template-rows: repeat(4, 200px);
     grid-gap: 59px;
     margin-top: 60px;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+  }
   }
   .sell-smarter-grid-text {
     max-width: 360px;
@@ -376,6 +448,10 @@ p {
     }
   }
 
+  @media (max-width: $mobile) {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
 }
 
 .customer-story {

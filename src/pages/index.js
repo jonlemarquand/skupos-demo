@@ -3,7 +3,27 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import ESImage from "../components/images/expertSupportImg"
+
+/* InfoBlock Images */
+
+import InfoBoxImgOne from "../components/images/infoBoxImgOne"
+import InfoBoxImgTwo from "../components/images/infoBoxImgTwo"
+import InfoBoxImgThree from "../components/images/infoBoxImgThree"
+
+/* Grid Images */
+
+import GridYellowImg from "../components/images/gridYellowImg"
+import GridOrangeImg from "../components/images/gridOrangeImg"
+import GridPurpleImg from "../components/images/gridPurpleImg"
+import GridGreenImg from "../components/images/gridGreenImg"
+import GridBlueImgOne from "../components/images/gridBlueImgOne"
+import GridBlueImgTwo from "../components/images/gridBlueImgTwo"
+
+
+import OneSupport from "../components/images/oneSupport"
 import TwoIntegrate from "../components/images/twoIntegrate"
+import ThreeQuick from "../components/images/threeQuick"
+import FourContract from "../components/images/fourContract"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -101,7 +121,7 @@ return (
       </div>
     </div>
     <div className="infobox">
-      <div className="infobox-placeholder-img"></div>
+      <InfoBoxImgOne />
       <div className="infobox-text left">
         <h2>{ data.wpPage.infoblock.infoblockHeader }</h2>
         <p>{ data.wpPage.infoblock.infoblockContent }</p>
@@ -110,7 +130,7 @@ return (
     <div className="sell-national">
       <div className="sell-national-content">
         <div>Sell just like the leading national chains starting at <span class="highlight">$20 per month</span></div>
-        <Link to="/" className="start-button-large-green">Get started</Link>
+        <Link to="/" className="sell-national-link">{ data.wpPage.adverts.advertLink1.title }</Link>
       </div>
     </div>
     <div className="infobox">
@@ -118,22 +138,52 @@ return (
         <h2>{ data.wpPage.infoblock.infoblockHeader2 }</h2>
         <p>{ data.wpPage.infoblock.infoblockContent2 }</p>
       </div>
-      <div className="infobox-placeholder-img"></div>
+      <InfoBoxImgTwo />
     </div>
     <div className="infobox">
-      <div className="infobox-placeholder-img"></div>
+      <InfoBoxImgThree />
       <div className="infobox-text left">
         <h2>{ data.wpPage.infoblock.infoblockHeader3 }</h2>
         <p>{ data.wpPage.infoblock.infoblockContent3 }</p>
       </div>
     </div>
     <div className="get-started-grid">
-      <div class="yellow gs-text">Hour set-up</div>
-      <div class="orange gs-text">No long-term commitments</div>
-      <div class="black gs-text">Skupos integrates with most popular POS systems and requires no long-term commitment, making it quick and easy to try with real customers today.</div>
-      <div class="purple gs-text">Remote setup</div>
-      <div class="mint gs-text">An internet connection</div>
-      <div class="skyblue gs-text">A Clover device or MNSP*</div>
+      <div class="yellow gs-text">
+        <GridYellowImg />
+        <div class="gs-content">{ data.wpPage.get_started_grid.yellowText }</div>
+      </div>
+      <div class="orange gs-text">
+        <div class="white-circle">
+          <GridOrangeImg />
+        </div>
+        <div class="gs-content">{ data.wpPage.get_started_grid.orangeText }</div>
+      </div>
+      <div class="black gs-text">
+        <h2>{ data.wpPage.get_started_grid.header }</h2>
+        <div class="gs-content">{ data.wpPage.get_started_grid.blackText }</div>
+      </div>
+      <div class="purple gs-text">
+        <GridPurpleImg />
+        <div class="gs-content">{ data.wpPage.get_started_grid.purpleText }</div>
+      </div>
+      <div class="mint gs-text">
+        <GridGreenImg />
+        <div class="gs-content">{ data.wpPage.get_started_grid.greenText }</div>
+      </div>
+      <div class="skyblue gs-text">
+        <div class="skyblue-box">
+          <GridBlueImgOne />
+          { data.wpPage.get_started_grid.blueText1 }
+        </div>
+        <div class="or-text">
+          <hr />
+          <div>or</div>
+          <hr />
+        </div>
+        <div class="skyblue-box">
+          <GridBlueImgTwo />
+          <div class="skyblue-text">{ data.wpPage.get_started_grid.blueText2 }</div>
+        </div>      </div>
       <div class="gs-other">
         Got an MNSP? <span class="fake-link">We're compatible.</span>
       </div>
@@ -146,7 +196,7 @@ return (
           <h3>{ data.wpPage.sellSmarter.subheader1 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext1 }</p>
         </div>
-        <TwoIntegrate />
+        <OneSupport />
         <div className="sell-smarter-grid-text">
           <h3>{ data.wpPage.sellSmarter.subheader2 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext2 }</p>
@@ -156,12 +206,12 @@ return (
           <h3>{ data.wpPage.sellSmarter.subheader3 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext3 }</p>
         </div>
-        <TwoIntegrate />
+        <ThreeQuick />
         <div className="sell-smarter-grid-text">
           <h3>{ data.wpPage.sellSmarter.subheader4 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext4 }</p>
         </div>
-        <TwoIntegrate />
+        <FourContract />
       </div>
     </div>
     <div className="expert-support">
