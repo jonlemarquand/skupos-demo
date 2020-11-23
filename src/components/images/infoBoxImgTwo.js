@@ -18,19 +18,25 @@ const FourContract = () => {
     query {
       placeholderImage: file(relativePath: { eq: "infobox2.png" }) {
         childImageSharp {
-          fixed(height: 542) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
-  return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+  return (
+  <div className="infobox-img-container"> 
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  </div>
+  )
 }
+
 
 export default FourContract

@@ -18,19 +18,24 @@ const ThreeQuick = () => {
     query {
       placeholderImage: file(relativePath: { eq: "ss-quick.png" }) {
         childImageSharp {
-          fixed(height: 200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 400, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
-  return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+  return (
+  <div className="support-img-container"> 
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  </div>
+  )
 }
 
 export default ThreeQuick

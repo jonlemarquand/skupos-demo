@@ -126,7 +126,6 @@ p {
       margin-left: 30px;
     }
   }
-
   
 }
 
@@ -154,7 +153,17 @@ p {
     width: 540px;
     background: $skgreen;
   }
+  .infobox-img-container {
+    width: 588px;
+    height: 460px;
+  
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: auto;
+      margin: 40px auto;
 
+    }
+  }
   .infobox-text {
     width: 460px;
     display: flex;
@@ -186,10 +195,20 @@ p {
     &.right {
       margin-right: 120px;
     }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin: 0 10px;
+
+      &.left, &.right {
+        margin: 0;
+      }
+    }
   }
 
   @media (max-width: $mobile) {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -245,6 +264,11 @@ p {
   grid-template-rows: repeat(8, 102px);
   grid-gap: 16px;
   
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(13, 102px);
+  }
+
   .gs-text {
     display: flex;
     flex-direction: column;
@@ -267,6 +291,12 @@ p {
     grid-column: 1 / 5;
     grid-row: 1 / 4;
     background: #FBD224;
+  
+    @media (max-width: $mobile) {
+      grid-column: 1 / 4;
+      grid-row: 5 / 8;
+    }
+  
   }
 
   .orange {
@@ -284,24 +314,46 @@ p {
       align-items: center;
       //margin-bottom: 20px;
     }
+
+    @media (max-width: $mobile) {
+      grid-column: 1 / 4;
+      grid-row: 8 / 11;
+    }
   }
 
   .black {
     grid-column: 5 / 13;
     grid-row: 1 / 5;
     background: $skblack;
+  
+    @media (max-width: $mobile) {
+      grid-column: 1 / 7;
+      grid-row: 1 / 5;
+    }
+  
   }
 
   .purple {
     grid-column: 5 / 9;
     grid-row: 5 / 7;
     background: #635EA9;
+  
+    @media (max-width: $mobile) {
+      grid-column: 1 / 4;
+      grid-row: 11 / 13;
+    }
   }
 
   .mint {
     grid-column: 9 / 13;
     grid-row: 5 / 7;
     background: $skgreen;
+  
+    @media (max-width: $mobile) {
+      grid-column: 4 / 7;
+      grid-row: 11 / 13;
+    }
+  
   }
 
   .skyblue {
@@ -322,7 +374,10 @@ p {
         padding: 30px;
       }
     }
-  
+    @media (max-width: $mobile) {
+      grid-column: 4 / 7;
+      grid-row: 5 / 11;
+    }
   }
 
   .gs-content {
@@ -348,6 +403,11 @@ p {
     .fake-link {
       color: $skgreen;
       text-decoration: underline;
+    }
+
+    @media (max-width: $mobile) {
+      grid-column: 1 / 7;
+      grid-row: 13 / 13;
     }
   }
 
@@ -380,6 +440,17 @@ p {
     max-width: 510px;
     text-align: center;
   }
+
+  .support-img-container {
+    width: 400px;
+    height: 200px;
+  
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: 150px;
+
+    }
+  }
   .sell-smarter-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -389,6 +460,25 @@ p {
 
     @media (max-width: $mobile) {
       grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 150px);
+      grid-gap: 10px;
+      margin-top: 20px;
+
+      .two {
+        grid-row: 2/2;
+      }
+
+      .four {
+        grid-row: 4/4;
+      }
+
+      .six {
+        grid-row: 6/6;
+      }
+
+      .eight {
+        grid-row: 8/8;
+      }
   }
   }
   .sell-smarter-grid-text {
@@ -412,6 +502,10 @@ p {
       margin: 0;
       text-align: left;
     }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -424,6 +518,15 @@ p {
   display: flex;
   justify-content: space-between;
   padding-left: 120px;
+  
+  .expert-support-img-container {
+    width: 510px;
+  
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .expert-support-text {
       display: flex;
@@ -446,11 +549,18 @@ p {
       font-size: 48px;
       margin-bottom: 14px;
     }
+    @media (max-width: $mobile) {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
   @media (max-width: $mobile) {
     padding: 0;
+    width: 100%;
+    height: auto;
     flex-direction: column-reverse;
+    padding-bottom: 20px;
   }
 }
 
@@ -474,7 +584,7 @@ p {
   justify-content: space-between;
   align-items: center;
   max-width: 800px;
-  height: 350px;
+  min-height: 350px;
   margin: 86px 0;
   
   .grey-rectangle {
@@ -488,12 +598,19 @@ p {
     font-family: $skfont;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
+    font-size: 3em;
     line-height: 54px;
     /* or 112% */
 
     text-align: center;
     letter-spacing: -1.5px;
+  
+    @media (max-width: $mobile) {
+      font-size: 2.5em;
+      line-height: 45px;
+      //padding: 0 20px;
+      margin: 40px 20px;
+    }
   }
 
   .customer-story-link {

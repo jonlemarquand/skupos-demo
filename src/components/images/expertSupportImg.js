@@ -18,19 +18,24 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "expert-support.png" }) {
         childImageSharp {
-          fixed(height: 552) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 510, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
-  return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+  return (
+  <div className="expert-support-img-container"> 
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  </div>
+  )
 }
 
 export default Image

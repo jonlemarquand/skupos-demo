@@ -192,22 +192,22 @@ return (
       <h2>{ data.wpPage.sellSmarter.header }</h2>
       <p>{ data.wpPage.sellSmarter.introText }</p>
       <div className="sell-smarter-grid">
-        <div className="sell-smarter-grid-text">
+        <div className="sell-smarter-grid-text two">
           <h3>{ data.wpPage.sellSmarter.subheader1 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext1 }</p>
         </div>
         <OneSupport />
-        <div className="sell-smarter-grid-text">
+        <div className="sell-smarter-grid-text four">
           <h3>{ data.wpPage.sellSmarter.subheader2 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext2 }</p>
         </div>
         <TwoIntegrate />
-        <div className="sell-smarter-grid-text">
+        <div className="sell-smarter-grid-text six">
           <h3>{ data.wpPage.sellSmarter.subheader3 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext3 }</p>
         </div>
         <ThreeQuick />
-        <div className="sell-smarter-grid-text">
+        <div className="sell-smarter-grid-text eight">
           <h3>{ data.wpPage.sellSmarter.subheader4 }</h3>
           <p>{ data.wpPage.sellSmarter.subtext4 }</p>
         </div>

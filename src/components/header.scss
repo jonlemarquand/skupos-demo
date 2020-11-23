@@ -26,9 +26,17 @@ header {
 
     .left-header {
         width: 300px;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
 
     .right-header {
         width: 220px;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 }

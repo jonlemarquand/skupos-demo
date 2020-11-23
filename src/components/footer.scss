@@ -61,14 +61,14 @@ footer {
         flex-grow: 1;
         margin-left: 180px;
 
-        @media (max-width: $mobile) {
-            flex-direction: column;
-            margin-left: 0;
-        }
-
         @media (max-width: $tablet) {
             flex-wrap: wrap;
             margin-left: 80px;
+        }
+
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            margin-left: 0;
         }
 
     }
